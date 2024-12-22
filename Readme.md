@@ -26,7 +26,10 @@ cd termdock
 2. Create Executable
 
 ```bash
-make 
+mkdir build
+cd buil
+cmake ..
+make
 ```
 
 
