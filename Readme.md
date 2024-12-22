@@ -12,7 +12,7 @@
 ### Prerequisites 📋
 
 ```bash
-sudo apt update && sudo apt install -y  build-essential libncurses5-dev libncursesw5-dev g++
+sudo apt update && sudo apt install -y  build-essential libssl-dev libssl-dev libncurses5-dev libncursesw5-dev g++
 ```
 ### Installation 🔧
 

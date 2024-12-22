@@ -2,9 +2,9 @@ cmake_minimum_required(VERSION 3.10)
 # Set the project name
 project(TermDock)
 
-add_definitions(-std=c++17)
+add_definitions(-std=c++20)
 
-set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}")
 
 # Create structure folders
@@ -23,4 +23,14 @@ add_executable(
 
 find_package( Curses REQUIRED )
 include_directories( ${CURSES_INCLUDE_DIRS} )
-target_link_libraries( TermDock  -lncurses -lpanel )
+
+
+# Install http Client
+include(FetchContent)
+
+FetchContent_Declare(
+    Cpp20HttpClient
+    GIT_REPOSITORY https://github.com/avocadoboi/cpp20-http-client.git
+)
+FetchContent_MakeAvailable(Cpp20HttpClient)
+target_link_libraries(TermDock PRIVATE Cpp20HttpClient::cpp20_http_client -lncurses -lpanel)
