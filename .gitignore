@@ -4,3 +4,4 @@ termdock
 ./build/*
 ./build/**
 ./build
+/build/
