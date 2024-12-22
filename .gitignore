@@ -1,3 +1,6 @@
 termdock
 *.o
 /graphical/src/*.o
+./build/*
+./build/**
+./build
