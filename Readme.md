@@ -11,30 +11,28 @@
 
 ### Prerequisites 📋
 
-
 ```bash
-
+sudo apt update && sudo apt install -y  build-essential libncurses5-dev libncursesw5-dev g++
 ```
 ### Installation 🔧
 
 1. Clone the repo
 
 ```bash
-
+git clone https://github.com/JavierRodriguez78/termdock
+cd termdock
 ```
 
 2. Create Executable
 
 ```bash
+make 
 ```
 
 
 ## Build with 🛠️
-
-Explica qué tecnologías usaste para construir este proyecto. Aquí algunos ejemplos:
-
 - [c++ ](https://isocpp.org/) - c17
-- [nasm](https://nasm.us/) - Assembler
+
 
 
 ## Contributing 🖇️
