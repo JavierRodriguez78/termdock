@@ -5,6 +5,7 @@
 #include "graphical/include/window.hpp"
 #include "graphical/include/terminal.hpp"
 #include "graphical/include/panel.hpp"
+#include "docker/include/container.hpp"
 
 using namespace std;
 
@@ -17,15 +18,18 @@ using namespace std;
 
 int main()
 {	
-   initscr(); /* Start Curses Mode*/
-   cbreak();	/* Line Bufferin Disabled*/
-   noecho();
+   // initscr(); /* Start Curses Mode*/
+   // cbreak();	/* Line Bufferin Disabled*/
+   // noecho();
    
+   //Init Container
+   Container  container;
+   container.sendRequest();
    //Init Terminal
-   Terminal terminal;
+   // Terminal terminal;
    
    //Create Window 
-   Window Win(
+   /*Window Win(
     (int)terminal.getHeight(),
     (int)terminal.getWidth(),
     0,
@@ -45,7 +49,7 @@ int main()
    Win.~Window();
    Pan.~Panel();
    endwin();
-   return 0;
+   return 0;*/
 }
 
 

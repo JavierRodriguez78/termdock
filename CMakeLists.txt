@@ -9,7 +9,7 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}")
 
 # Create structure folders
 set (GRAPHICAL_INTERFACE graphical/src)
-
+set (DOCKER_INTERFACE docker/src)
 
 # Add the executable
 add_executable(
@@ -18,6 +18,8 @@ add_executable(
     ${GRAPHICAL_INTERFACE}/panel.cpp
     ${GRAPHICAL_INTERFACE}/terminal.cpp
     ${GRAPHICAL_INTERFACE}/window.cpp
+    ${DOCKER_INTERFACE}/container.cpp
+    ${DOCKER_INTERFACE}/docker.cpp
 )
 
 
@@ -33,4 +35,11 @@ FetchContent_Declare(
     GIT_REPOSITORY https://github.com/avocadoboi/cpp20-http-client.git
 )
 FetchContent_MakeAvailable(Cpp20HttpClient)
-target_link_libraries(TermDock PRIVATE Cpp20HttpClient::cpp20_http_client -lncurses -lpanel)
+
+# Install Curl
+find_package(CURL REQUIRED)
+
+#Install RapidJSON
+find_package(RapidJSON)
+target_link_libraries(TermDock PRIVATE Cpp20HttpClient::cpp20_http_client CURL::libcurl -lncurses -lpanel)
+

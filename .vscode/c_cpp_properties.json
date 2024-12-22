@@ -5,10 +5,14 @@
             "includePath": [
                 "${workspaceFolder}/graphical/src/**",
                 "${workspaceFolder}/graphical/include/**",
-                "${workspaceFolder}/graphical/include"
+                "${workspaceFolder}/graphical/include",
+                "${workspaceFolder}/docker/src/**",
+                "${workspaceFolder}/docker/include/**",
+                "${workspaceFolder}/docker/include",
+                "${workspaceFolder}/build/_deps/cpp20httpclient-src/include"
             ],
             "defines": [],
-            "compilerPath": "/usr/bin/gcc",
+            "compilerPath": null,
             "cStandard": "c17",
             "cppStandard": "gnu++17",
             "intelliSenseMode": "linux-gcc-x64"
